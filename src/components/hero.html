@@ -1,0 +1,23 @@
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">iPhone 17 Pro</h1>
+    <button class="hero__button">More details</button>
+  </div>
+  <picture class="hero__picture">
+    <source
+      media="(max-width: 800px)"
+      srcset="/src/assets/image/hero/hero_small_2x.jpg 840w"
+      sizes="100vw"
+      type="image/webp"
+    />
+    <source
+      srcset="
+        /src/assets/image/hero/hero_small_2x.jpg  840w,
+        /src/assets/image/hero/hero_large_2x.jpg 3840w
+      "
+      sizes="100vw"
+      type="image/jpg"
+    />
+    <img loading="eager" src="/src/assets/image/hero/hero_medium_2x.jpg" alt="Iphone 17 pro" />
+  </picture>
+</section>
