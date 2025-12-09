@@ -1,23 +1,34 @@
 <section class="hero">
-  <div class="hero__content">
-    <h1 class="hero__title">iPhone 17 Pro</h1>
-    <button class="hero__button">More details</button>
-  </div>
-  <picture class="hero__picture">
+  <picture class="hero__bg">
     <source
       media="(max-width: 800px)"
-      srcset="/src/assets/image/hero/hero_small_2x.jpg 840w"
+      srcset="/src/assets/image/hero/hero_small.jpg 840w"
       sizes="100vw"
       type="image/webp"
     />
     <source
-      srcset="
-        /src/assets/image/hero/hero_small_2x.jpg  840w,
-        /src/assets/image/hero/hero_large_2x.jpg 3840w
-      "
+      srcset="/src/assets/image/hero/hero_small.jpg 840w, /src/assets/image/hero/hero_big.jpg 3840w"
       sizes="100vw"
       type="image/jpg"
     />
-    <img loading="eager" src="/src/assets/image/hero/hero_medium_2x.jpg" alt="Iphone 17 pro" />
+    <img
+      loading="eager"
+      src="/src/assets/image/hero/hero_big.jpg"
+      alt="Iphone 17 pro"
+      class="hero__image"
+    />
   </picture>
+  <div class="hero__content">
+    <img
+      src="/src/assets/image/hero/hero_tittle.png"
+      alt="Tittle - Vision Pro"
+      class="hero__title-img"
+    />
+    <p class="hero__subtitle">Welcome to the era of spatial computing.</p>
+    <p class="hero__subtitle-two">Available starting 2.2</p>
+    <div class="hero__actions">
+      <a href="#" class="hero__link">Learn more ></a>
+      <a href="#" class="hero__link hero__link--primary">Pre-order ></a>
+    </div>
+  </div>
 </section>

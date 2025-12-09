@@ -4,6 +4,10 @@
 @use 'blocks/header';
 @use 'blocks/hero';
 
+* {
+  line-height: 1;
+  box-sizing: border-box;
+}
 body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
