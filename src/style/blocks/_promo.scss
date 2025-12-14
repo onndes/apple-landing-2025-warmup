@@ -1,4 +1,5 @@
 .promo {
+  margin-bottom: 10px;
   &__block {
     position: relative;
     min-height: 90vh;
@@ -17,4 +18,5 @@
     object-fit: cover;
     object-position: center top;
   }
+
 }

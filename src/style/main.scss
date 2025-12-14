@@ -5,10 +5,12 @@
 @use 'blocks/header';
 @use 'blocks/hero';
 @use 'blocks/promo';
+@use 'blocks/products';
 
 * {
   line-height: 1;
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;

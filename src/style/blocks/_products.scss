@@ -1,0 +1,121 @@
+@use '../mixins' as m;
+
+.products {
+  max-width: 100%;
+  width: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+  }
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  &__info {
+    @include m.actions-absolute-top();
+    &--bottom {
+      top: auto;
+      bottom: 32px;
+    }
+  }
+
+  &__title {
+    @include m.title-black(24px, 6px, 30px);
+    &--white {
+      @include m.title-white(24px, 6px, 30px);
+    }
+    &--img {
+      max-width: 90px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__subtitle {
+    @include m.subtitle-black(279px, 16px, 6px, 20px);
+
+    &--white {
+      @include m.subtitle-white(279px, 16px, 6px, 20px);
+    }
+    margin-bottom: 14px;
+  }
+
+  &__actoions {
+  }
+
+  &__actions {
+    @include m.link-blue;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__learn {
+  }
+
+  &__shop {
+  }
+}
+
+@include m.tablet {
+  .products {
+    &__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+
+    &__image {
+        max-height: 624px;
+    }
+
+    &__info {
+    }
+
+    &__info--bottom {
+    }
+
+    &__title {
+    }
+
+    &__subtitle {
+    }
+
+    &__actions {
+    }
+
+    &__title--img {
+    }
+
+    &__subtitle--white {
+    }
+
+    &__learn {
+    }
+
+    &__shop {
+    }
+  }
+}
