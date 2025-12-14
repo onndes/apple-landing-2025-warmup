@@ -6,6 +6,7 @@
   }
 }
 
+// Implemented these global styles and mixins manually to brush up on the syntax and determine the most efficient workflow.
 @mixin actions-absolute-top() {
   position: absolute;
   z-index: 1;
