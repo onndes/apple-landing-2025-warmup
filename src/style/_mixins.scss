@@ -1,6 +1,58 @@
+@use 'variables' as v;
+
 @mixin tablet {
   @media (min-width: 768px) {
     @content;
   }
 }
 
+@mixin actions-absolute-top() {
+  position: absolute;
+  z-index: 1;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+@mixin title-white($fs: 31px, $mb: 14px, $fst: 54px) {
+  color: v.$white;
+  font-weight: bold;
+  font-size: $fs;
+  margin: 0 0 $mb 0;
+  letter-spacing: -0.2px;
+  text-align: center;
+  @include tablet {
+    font-size: $fst;
+  }
+}
+
+@mixin title-black($fs: 31px, $mb: 14px, $fst: 54px) {
+  @include title-white($fs, $mb, $fst);
+  color: v.$black;
+}
+
+@mixin subtitle-white($mw: 205px, $fs: 20px, $mb: 14px, $fst: 24px) {
+  font-size: $fs;
+  line-height: 22px;
+  color: v.$white;
+  text-align: center;
+  max-width: $mw;
+  margin: 0 auto $mb auto;
+  font-weight: 200;
+  letter-spacing: 1.1px;
+  @include tablet {
+    font-size: $fst;
+  }
+}
+
+@mixin subtitle-black($mw: 205px, $fs: 20px, $mb: 14px, $fst: 24px) {
+  @include subtitle-white($mw, $fs, $mb, $fst);
+  color: v.$black;
+}
+@mixin link-blue {
+  font-size: 17px;
+  color: v.$blue;
+  font-weight: 300;
+}
