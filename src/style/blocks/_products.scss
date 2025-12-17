@@ -3,6 +3,7 @@
 .products {
   max-width: 100%;
   width: 100%;
+  margin-bottom: 10px;
 
   &__container {
     display: grid;
@@ -77,8 +78,8 @@
 @include m.tablet {
   .products {
     &__container {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
     }
 
     &__item {
@@ -88,7 +89,7 @@
     }
 
     &__image {
-        max-height: 624px;
+      max-height: 624px;
     }
 
     &__info {

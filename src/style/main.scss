@@ -6,9 +6,10 @@
 @use 'blocks/hero';
 @use 'blocks/promo';
 @use 'blocks/products';
-
+@use 'blocks/information';
+@use 'blocks/navigation';
 * {
-  line-height: 1;
+  line-height: 14px;
   box-sizing: border-box;
   margin: 0;
 }
@@ -108,4 +109,6 @@ li {
   }
 }
 
-
+.footer {
+  background-color: #f5f5f7;
+}

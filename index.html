@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="./src/style/main.scss" />
   </head>
   <body>
-    <div data-include="/src/components/header.html"></div>
-    <div class="main">
+    <header data-include="/src/components/header.html"></header>
+    <main class="main">
       <div data-include="/src/components/hero.html"></div>
       <div data-include="/src/components/promo.html"></div>
       <div data-include="/src/components/products.html"></div>
-    </div>
+    </main>
+    <footer class="footer">
+      <div data-include="/src/components/information.html"></div>
+      <div data-include="/src/components/navigation.html"></div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
