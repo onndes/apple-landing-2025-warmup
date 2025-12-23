@@ -20,7 +20,7 @@
     summary {
       color: #1d1d1f;
       font-weight: 300;
-      font-size: 15px;
+      font-size: 13px;
       list-style: none;
       display: flex;
       justify-content: space-between;
@@ -44,8 +44,8 @@
     }
     li {
       padding: 8px 0;
-      font-size: 14px;
-      color: v.$black;
+      font-size: 12px;
+      color: v.$gray-text;
     }
 
     @include m.desktop {
@@ -78,10 +78,11 @@
   }
 
   &__other {
-    padding-bottom: 20px;
-    font-size: 14px;
+    padding-bottom: 15px;
+    font-size: 12px;
     color: v.$gray-text;
     border-bottom: 1px solid v.$gray-light;
+    margin-bottom: 5px;
 
     a {
       color: v.$blue;
