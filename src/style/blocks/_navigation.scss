@@ -2,11 +2,12 @@
 @use '../variables' as v;
 
 .navigation {
-  padding-top: 20px;
   padding-bottom: 10px;
-  border-top: 1px solid v.$gray-light;
 
   &__menu {
+    border-top: 1px solid v.$gray-light;
+    padding-top: 20px;
+    margin-bottom: 20px;
     details {
       padding: 7px 0;
       border-bottom: 1px solid v.$gray-light;
@@ -74,5 +75,19 @@
   }
   &__section[open] &__icon {
     transform: rotate(-135deg);
+  }
+
+  &__other {
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: v.$gray-text;
+    border-bottom: 1px solid v.$gray-light;
+
+    a {
+      color: v.$blue;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 300;
+    }
   }
 }
