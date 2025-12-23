@@ -1,4 +1,4 @@
-.navigation {
+.navigation-m {
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -8,7 +8,7 @@
 
   &__menu {
     details {
-      padding: 15px 0;
+      padding: 7px 0;
       border-bottom: 1px solid #d2d2d7;
     }
     summary {
@@ -24,7 +24,7 @@
       padding-top: 5px;
       display: flex;
       flex-direction: column;
-        gap: 2px;
+      gap: 2px;
     }
     li {
       padding: 8px 0;
