@@ -1,6 +1,8 @@
+@use '../variables' as v;
+
 .information {
-  background-color: #f5f5f7;
-  padding: 10px 0 10px 0;
+  background-color: v.$white;
+  padding: 10px 0 20px 0;
   &__container {
     display: flex;
     flex-direction: column;
@@ -11,7 +13,7 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: -0.12px;
-    color: #6e6e73;
+    color: v.$gray-text;
   }
 
   &__text-link {

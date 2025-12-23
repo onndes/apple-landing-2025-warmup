@@ -7,7 +7,8 @@
 @use 'blocks/promo';
 @use 'blocks/products';
 @use 'blocks/information';
-@use 'blocks/navigation-mobile';
+@use 'blocks/navigation';
+
 * {
   line-height: 14px;
   box-sizing: border-box;
@@ -34,9 +35,9 @@ li {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@include m.tablet {
   .container {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -110,5 +111,5 @@ li {
 }
 
 .footer {
-  background-color: #f5f5f7;
+  background-color: v.$white;
 }

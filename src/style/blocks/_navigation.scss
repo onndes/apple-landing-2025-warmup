@@ -1,0 +1,78 @@
+@use '../mixins' as m;
+@use '../variables' as v;
+
+.navigation {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid v.$gray-light;
+
+  &__menu {
+    details {
+      padding: 7px 0;
+      border-bottom: 1px solid v.$gray-light;
+      @include m.desktop {
+        border-bottom: none;
+        padding: 0;
+        margin-bottom: 24px;
+      }
+    }
+    summary {
+      color: #1d1d1f;
+      font-weight: 300;
+      font-size: 15px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      @include m.desktop {
+        pointer-events: none;
+        cursor: default;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 0;
+      }
+    }
+    ul {
+      padding-top: 5px;
+      // display: flex;
+      // flex-direction: column;
+      // gap: 2px;
+      @include m.desktop {
+        padding: 0;
+      }
+    }
+    li {
+      padding: 8px 0;
+      font-size: 14px;
+      color: v.$black;
+    }
+
+    @include m.desktop {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      grid-auto-flow: column;
+      align-content: start;
+      grid-auto-rows: min-content;
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+
+    border-right: 1px solid v.$black;
+    border-bottom: 1px solid v.$black;
+
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+
+    @include m.desktop {
+      display: none;
+    }
+  }
+  &__section[open] &__icon {
+    transform: rotate(-135deg);
+  }
+}
