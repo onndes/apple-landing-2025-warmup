@@ -1,8 +1,29 @@
-document.querySelectorAll('[data-include]').forEach(async (el) => {
-  const file = el.getAttribute('data-include');
-  const resp = await fetch(file);
-  if (resp.ok) el.outerHTML = await resp.text();
-});
+function burgerOpen() {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav');
+  const header = document.querySelector('.header');
+  if (!burger || !nav || !header) return;
+
+  burger.addEventListener('click', () => {
+    console.log('text');
+    const isOpen = burger.classList.toggle('is-open');
+    nav.classList.toggle('is-open', isOpen);
+    header.classList.toggle('is-open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+}
+
+async function loadIncludes() {
+  const includes = document.querySelectorAll('[data-include]');
+  for (const el of includes) {
+    const file = el.getAttribute('data-include');
+    const resp = await fetch(file);
+    if (resp.ok) el.outerHTML = await resp.text();
+  }
+  burgerOpen();
+}
+
+loadIncludes();
 
 function checkDetailsState() {
   const detailsList = document.querySelectorAll('.navigation__menu details');
