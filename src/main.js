@@ -2,14 +2,35 @@ function burgerOpen() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
   const header = document.querySelector('.header');
+  const body = document.body;
+
   if (!burger || !nav || !header) return;
 
-  burger.addEventListener('click', () => {
-    console.log('text');
+  const closeMenu = () => {
+    burger.classList.remove('is-open');
+    nav.classList.remove('is-open');
+    header.classList.remove('is-open');
+    body.classList.remove('is-locked');
+    burger.setAttribute('aria-expanded', 'false');
+  };
+
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     const isOpen = burger.classList.toggle('is-open');
     nav.classList.toggle('is-open', isOpen);
     header.classList.toggle('is-open', isOpen);
     burger.setAttribute('aria-expanded', isOpen);
+    body.classList.toggle('is-locked', isOpen);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!header.classList.contains('is-open')) return;
+    if (header.contains(e.target)) return;
+    closeMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
   });
 }
 
@@ -55,3 +76,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', checkDetailsState);
+
+

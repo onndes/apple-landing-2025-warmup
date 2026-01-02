@@ -18,6 +18,9 @@
 body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
+  &.is-locked {
+    overflow: hidden;
+  }
 }
 
 a {
