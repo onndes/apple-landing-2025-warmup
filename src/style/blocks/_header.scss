@@ -26,11 +26,11 @@
       transition-delay: 0.03s;
     }
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // height: 60px;
     &.container {
       padding: 15px 20px;
     }
@@ -47,11 +47,11 @@
       transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
   &__action {
-    transition: opacity 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
-      transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
     z-index: 2;
     display: flex;
     align-items: center;
+    transition: opacity 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
   @include m.tablet {
     &__action:last-child {

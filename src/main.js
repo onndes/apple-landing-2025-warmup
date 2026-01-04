@@ -1,4 +1,9 @@
+let burgerInitialized = false;
+
 function burgerOpen() {
+  if (burgerInitialized) return;
+  burgerInitialized = true;
+
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
   const header = document.querySelector('.header');
@@ -75,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
   waitForFooter();
 });
 
-window.addEventListener('resize', checkDetailsState);
-
-
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(checkDetailsState, 150);
+});
